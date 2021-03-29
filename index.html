@@ -10,14 +10,48 @@
 </head>
 
 <body>
-  <div class="todo" id="listPokemon">
-    <button>Name of trainer</button>
-     <div class="card bg-success">
-    <div class="card-body text-center">
-      <p class="card-text">Pokemon</p>
-      <img src="./img/pokemon 1.png">
+    <header class="header">
+      <img src="./img/1280px-International_Pokémon_logo.svg.png" class="frontImg">
+  </header>
+  <div class="card">
+    <div class="card-body" id="container__choose-playerName"> <h1>Can you say your Pokémon trainer name</h1></div>
+    <div class="card_playerName">
+      <img src="./img/Oak_Pokémon_Let's_Go.png" alt="D.Pokemon" width="200">
+        <form id="formName" class="form">
+          <input type="text" placeholder="JuanesGH" class="txt" id="txtPlayerName">
+      <button class="btn" id="btnPlayerName">Aceptar</button>
+        </form>
     </div>
   </div>
+  
+              <!-- container with name of the player -->
+    <div class="container" id="container__turno">
+      <section class="container__turno--player" id="p1">
+        <h3>Player</h3>
+        <p class="displayText" id="namePlayer1"></p>
+      </section>
+      <h2 class="container__turno--textTurno">
+        Battle
+      </h2>
+      <section class="container__turno--player" id="p2">
+        <h3>Enemy Pokémon</h3>
+        <p class="displayText" id="namePlayer2"></p>
+      </section>
+    </div>
+
+              <!-- container with the pokemons -->
+     <div class="card_Selector" id="card_Selector"> 
+         <h1>Select your Pokémon</h1>
+         <div class="Pokemon1" id="card_Pokemon_left">
+          <div class="Pokemon-1">POKEMON</div>
+        </div>
+        <div class="Pokemon2" id="Pokemon2">
+          <div class="Pokemon-2">POKEMON</div>
+        </div>
+
+        
+     </div>
+
     <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,28 +1,21 @@
-const button = document.querySelector('button');
-
-button.onclick = function() {
-  let name = prompt("Can you say your pokemon trainer ID?");
-  alert('¡Hi ' + name + ', nice to meet you!');
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
-//-------botton-------//
+ console.log(getRandomInt(1, 151));
 
-let list = document.getElementById("listPokemon")
-
-
-function callPokemo(id, num) {
-    fetch('https://pokeapi.co/api/v2/pokemon/${id}')
-    .them(function (response) {
-        response.json()
-        .them((pokemon) => {
-                creatPokemon(pokemon, num);
-            })
+const bringData = (id) =>{
+        fetch(`https://pokeapi.co/api/v2/${id}`)
+        .then= (res => res.json())
+        .then(data => {
+            bringData.innerHTML = `
+                    <img src = "${data.results['0'].picture.large}"`
+        
     })
+    
 }
 
-function callPokemons() {
-    let fristId = Math.round(Math.random() * 150);
-    let secoundId = Math.round(Math.random() * 150);
-    callPokemo(fristId);
-    callPokemo(secoundId);
+const paintCart = (pokemon) => {
+    console.log(pokemon)
+    const cPokemon1 = getSelection
+  
 }
-callPokemons()
