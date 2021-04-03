@@ -12,6 +12,10 @@ h1{
     font-weight: bold;
     font-size: 1rem;
 }
+#Popokemonimgke{
+    width: 20px;
+    background-color: brown;
+}
 .card{
     width: 400px;
     height: 400px;
