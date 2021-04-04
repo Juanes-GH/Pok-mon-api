@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link  href="./css/style.css" rel="stylesheet">
-   
-    <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>POKE BATTLE</title>
 </head>
 <body>
-    <ul class="pokemon-list" id="lista">
+  <div>
+    <img src="./img/logo-pokemon.png" alt="" class="header">
+  </div>
+  <!-----Name of the trainerpk--->
+  <div class="card">
+    <h1 class="txtCard">Can you say your Pokémon trainer name</h1>
+    <div class="imgOak">
+      <img src="./img/Oak_Pokémon_Let's_Go.png" alt="D.Pokemon" class="oak">
+        <form id="formName" class="form">
+          <input type="text" placeholder="JuanesGH" class="txt" id="txtPlayerName">
+      <button class="btn" id="btnPlayerName">Aceptar</button>
+        </form>
+    </div>
+  </div>
 
-  </ul>
-    <h1 id="namePoke"> pikachu</h1>
-    <img id="pokemonimg" src="" alt="">
+  <!------call the pokemons------>
+  <div class="container">
+    <h1 class="text-pokemon">My First Bootstrap Page</h1>
+   <div class="pokemon-list" id="listaPokemon">
+    <div class="pokemon-1" id="pokemon-1">
+       <img  src="" alt="">
+       <p></p>
+      </div>
+
+      <div class="pokemon_2" id="pokemon-2">
+        <img  src="" alt="">
+        <p></p>
+      </div>
+
+      <div class="pokemon-3" id="pokemon-3">
+        <img  src="" alt="">
+        <p></p>
+      </div>
+   </div>
+  </div>
+      <div class="pokemon" id="pokemon-4">
+        <img  src="" alt="">
+        <p></p>
+      </div>
+  
     <script src="./js/main.js"></script>
 </body>
 
