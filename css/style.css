@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Londrina+Solid:wght@900&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kiwi+Maru:wght@300&family=Londrina+Solid:wght@900&family=Train+One&display=swap');
+
 body{
     background-color: #212121;
 }
@@ -18,14 +22,16 @@ body{
 }
 
 .card{
-    top: 50px;
+    top: 30px;
     width: 500px;
-    height: 500px;
+    height: 450px;
     margin: 0 auto;
     display: block;
+    background-color: #78ee9b93
 }
 .txtCard{
     text-align: center;
+    font-family: Anton;
 }
 .oak{
     margin-top: 150px;
@@ -47,24 +53,73 @@ body{
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 .header{
-    width: 600px;
-    height: 200px;
+    width: 500px;
+    height: 150px;
     margin: 0 auto;
     display: block;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
 .container{
-background-color: #3761a8;
-margin-top: 200px;
-padding: 50px;
+    background-color: #0691c0;
+    margin-top: 100px;
+    border: 1px #000;
 }
+
 .text-pokemon{
     text-align: center;
+    font-family: Anton;
 }
 
-.pokemon_2{
-    margin: 0 auto;
+.pokemon-list{
     display: block;
-
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+.imgPokemon1{
+    display: block;
+    margin: 0 auto;
+    
+}
+.NamePokemon-1{
+    text-align: center;
+    font-family: Londrina Solid;
+    color: #feca1b;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.imgPokemon2{
+    display: block;
+    margin: 0 auto;
+}
+.NamePokemon-2{
+    text-align: center;
+    font-family:Londrina Solid;
+    color: #feca1b;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.imgPokemon3{
+    display: block;
+    margin: 0 auto;
+}
+.NamePokemon-3{
+    text-align: center;
+    font-family:Londrina Solid;
+    color: #feca1b;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+.container-battleC{
+    background-color: #82e8a0 ;
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+}
+.battleCamp{
+    display: block;
+    margin: 0 auto;
+    width: 720px;
+    height: 400px;
+    padding-bottom: 20px;
 }
