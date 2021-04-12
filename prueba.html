@@ -10,22 +10,18 @@
     <img src="./img/logo-pokemon.png" alt="" class="header">
   </div>
   <!-----Name of the trainerpk--->
-  <div class="card">
-    <h1 class="txtCard">Can you say your Pokémon trainer name</h1>
-    <div class="imgOak">
+  <div class="card" id="container__choose-playerName" >
+    <h1 class="txtCard">Tell your trainer name</h1>
+    <div class="">
       <img src="./img/Oak_Pokémon_Let's_Go.png" alt="D.Pokemon" class="oak">
+ <!-----Name of the trainerpk--->
         <form id="formName" class="form">
-                      <!-----Name of the trainerpk--->
           <input type="text" placeholder="JuanesGH" class="txt" id="txtPlayerName">
-      <button class="btn" id="PlayerName">Aceptar</button>
+          <button class="btn" id="PlayerName">Aceptar</button>
         </form>
     </div>
   </div>
- <!---    <input type="button" id="botonocultamuestra" value="Mostrar div" style="font-size:14px;cursor:pointer;margin:15px;padding:5px;"/>
-<div id="divocultamuestra"></div>
-    </div>
-  </div>
--->
+
   <!------call the pokemons------>
   <div class="container">
     <h1 class="text-pokemon">Select your Pokémon</h1>
@@ -47,9 +43,12 @@
         </div>
     </div>
   </div>
-<!------call the pokemons------>
+<!------call the pokemon4------>
   <div class="container-battleC" >
-    <h1 class="text-pokemon">Battle</h1>
+    <div class="namePlayer" id="p1">
+      <h1 class="namePlayertxt">Fight</h1>
+      <h2 class="namePlayer1"></h2>
+    </div>
       <div class="pokemonList-4" id="pokemonList4">
 
           <div class="pokemon-4" id="pokemon-4">
@@ -57,16 +56,8 @@
             <p class="namePokemon-4"></p>
             <img src="./img/d5ynr9c-33aeebd0-1cd8-45d9-86fc-8431aa114534.png" class="battleCamp">
           </div>
-          
-         
         </div>
-    </div>
-
-
-   
-
-     
-
+  </div>
     <script src="./js/main.js"></script>
 
 </body>

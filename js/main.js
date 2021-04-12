@@ -38,7 +38,7 @@ function consultarPokemon(id, num){
 
  }
  consultarPokemones()
- //-------------------------------------------------botton---------------------------------------------------------//
+ //----------------------------------------------pokemon4---------------------------------------------------------//
  let newList = document.getElementById("pokemonList4")
 
  function consoultPokemon(id, name){
@@ -64,3 +64,40 @@ function consultarPokemon(id, num){
     name.textContent = pokemon.name
   }
   consoultPokemons()
+//---------------------------Nametrainer-------------------------------------------------//
+  const $chosePlayerName  = document.getElementById('container__choose-playerName')
+  const $btnPlayer      = document.getElementById('PlayerName')
+  const $formName			= document.getElementById('formName')
+  const $p1 				= document.getElementById('p1')
+  const $txtPlayer 		= document.getElementById('txtPlayerName')
+  const $playerName1 		= document.getElementById('namePlayer1')
+
+  var namePlayer1
+
+$btnPlayer.addEventListener('click', playerName)
+
+
+$formName.addEventListener('submit', (ev) => {
+  ev.preventDefault()
+  playerName()
+})
+  function empezar(){
+    $chosePlayerName.classList.toggle('choosePlayerName')
+    setTimeout(() => $p1.classList.toggle('indicator'), 500)
+  }
+
+function playerName(){
+  switch(turno){
+      case 1:
+          if($txtPlayer.value == '') {
+            swal('Elije tu nombre de maestro Pokemon', `Player ${turno}, debes ingresar un nombre de usuario`, 'warning')
+          }else{
+            namePlayer1 = $txtPlayer.value
+            $playerName1.innerHTML = namePlayer1
+            $txtPlayer.value = ''
+            turno++
+            $p1.classList.toggle('indicator')
+          }
+      break
+  }
+}
