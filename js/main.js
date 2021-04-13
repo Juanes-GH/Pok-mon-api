@@ -64,15 +64,17 @@ function consultarPokemon(id, num){
     name.textContent = pokemon.name
   }
   consoultPokemons()
-//---------------------------Nametrainer-------------------------------------------------//
-  const $chosePlayerName  = document.getElementById('container__choose-playerName')
+//---------------------------Nametrainer-------------------------------------------------//  
+const $chosePlayerName  = document.getElementById('container__choose-playerName')
   const $btnPlayer      = document.getElementById('PlayerName')
   const $formName			= document.getElementById('formName')
   const $p1 				= document.getElementById('p1')
   const $txtPlayer 		= document.getElementById('txtPlayerName')
   const $playerName1 		= document.getElementById('namePlayer1')
+  const $turno 			= document.getElementById('container__turno')
 
   var namePlayer1
+  var turno   = 1
 
 $btnPlayer.addEventListener('click', playerName)
 
