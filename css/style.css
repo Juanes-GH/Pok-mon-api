@@ -50,7 +50,7 @@ body{
     display: block;
     margin-top: 5px;
 }
-/*---------------------------------------------imgPOkemonHeder-----------------------------------------------------*/
+/*--------------------------------------imgPOkemonHeder-----------------------------------------------------*/
 
 .header{
     width: 500px;
@@ -58,7 +58,7 @@ body{
     margin: 0 auto;
     display: block;
 }
-/*---------------------------------------container select pokemon-------------------------------------------------*/
+/*---------------------------------------container select pokemon-------------------------------------------*/
 .container{
     background-color: #0691c0;
     margin-top: 100px;
@@ -92,6 +92,18 @@ body{
     border: 6px solid rgb(6, 105, 235);
 
 }
+.btnPokemonPiker{
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Anton;
+    letter-spacing: .1em;
+    cursor: pointer;
+    background-color: #5f9ea0;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+}
 
 .imgPokemon1, .imgPokemon2, .imgPokemon3{
     background-color: #88c3ee;
@@ -116,7 +128,10 @@ body{
 }
 
 
-/*--------------------------------------------------headerbattle-------------------------------------------------*/
+/*---------------------------------------------headerbattle-------------------------------------------------*/
+.txtEnemy{
+    float: right;
+}
 .namePlayer{
     height: 95px;
     width: auto;
@@ -142,11 +157,41 @@ body{
     font-size: 20px;
     letter-spacing: 3px;
 }
-/*------------------------------container Pokemon4---------------------------------------------*/
+/*------------------------------container pokemon battle---------------------------------------------*/
+.btnsAtack{
+    margin-right: 5px;
+}
+.btnpokemonAtack_1{
+
+    background-color: #5f9ea0;
+    color: #fff;
+    margin-top: 20px;
+    width: 70px;
+    display: block;
+    height: 20px;
+}
+.btnpokemonAtack_2{
+    
+    background-color: #5f9ea0;
+    color: #fff;
+    margin-top: 20px;
+    width: 70px;
+    display: block;
+    height: 20px;
+}
+.btnpokemonAtack_3{
+    background-color: #5f9ea0;
+    color: #fff;
+    margin-top: 20px;
+    width: 70px;
+    display: block;
+    height: 20px;
+}
+
 .container-battleC{
     background-color: #82e8a0 ;
     width: auto;
-    height: auto;
+    height: 600px;
     margin-top: 60px;
 }
 .battleCamp{
