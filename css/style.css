@@ -126,22 +126,20 @@ body{
     text-transform: uppercase;
     padding-top: 31px;
 }
+.pokemonMoves,.pokemonsMoves2{
+    display: none;
+}
 
 
 /*---------------------------------------------headerbattle-------------------------------------------------*/
-.txtEnemy{
-    float: right;
-}
 .namePlayer{
     height: 95px;
     width: auto;
     background-color: cadetblue;
 
 }
-.namePlayer1{
-    padding-top: 5px;
-    width: auto;
-    margin-left: 10px;
+.player{
+    font-family: Anton;
 }
 .namePlayertxt{
     margin: 0 auto;
@@ -157,10 +155,17 @@ body{
     font-size: 20px;
     letter-spacing: 3px;
 }
-/*------------------------------container pokemon battle---------------------------------------------*/
-.btnsAtack{
-    margin-right: 5px;
+.enemy{
+    margin-top: -48px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    margin-right: 32px;
+    font-family: Anton;
+    text-transform: uppercase;
 }
+/*------------------------------container pokemon battle---------------------------------------------*/
+
 .btnpokemonAtack_1{
 
     background-color: #5f9ea0;
@@ -200,20 +205,61 @@ body{
     width: 720px;
     height: 400px;
     padding-bottom: 20px;
-    margin-top: 20px;
+    margin-top: -167px;
+}
+.namePokemon-4{
+    text-transform: uppercase;
 }
 .imgPokemon4{
     width: 150px;
     height: 150px;
     position: absolute;
-    left: 790px;
-    margin-top: 130px;
+    left: 775px;
+    margin-top: 123px;
 }
-.namePokemon-4{
-    margin-right: 10px;
-    display: block;
+.imgPokemon5{
+    width: 205px;
+    height: 205px;
     position: absolute;
-    right: 10px;
+    left: 369px;
+    margin-top: -40px;
+    transform: scaleX(-1);
+}
+.lifePokemonEnemy{
+    width: 130px;
+    height: 30px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.lifePokemonChosen{
+    width: 130px;
+    height: 30px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.infoPokemonMoves{
+    height: 195px;
+    width: 260px;
+    background-color: #fff;
+    margin-top: -197px;
+    margin-left: 13px;
+    padding: 12px;
+    border-radius: 10px;
+    color: cornflowerblue;
+    font-family: Anton;
+}
+.infoPokemon_4Moves{
+    height: 195px;
+    width: 240px;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    color: cornflowerblue;
+    font-size: 16px;
+    position: relative;
+    left: 1090px;
+    top: 47px;
+    font-family: Anton;
 }
 /*-----------------------------------------------------------------------------------------------------------*/
 
