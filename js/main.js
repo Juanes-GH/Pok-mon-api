@@ -144,7 +144,7 @@ function playerName(){
 switch(turno){
     case 1:
         if($txtPlayer.value == '') {
-          swal('Elije tu nombre de maestro Pokemon', `Player ${turno}, debes ingresar un nombre de usuario`, 'warning')
+          swal(`Player ${turno}`)
         }else{
           namePlayer1 = $txtPlayer.value
           $playerName1.innerHTML = namePlayer1
@@ -162,11 +162,11 @@ $chosePokemon.classList.toggle('choosePokemon')
 //---------------------------battle--------------------------------------------------//
 const yourPokemon = document.getElementById('pokemon5')
 const pokemonEnmy = document.getElementById('pokemon-4')
-//const tuno a = yourPokemon
-//const tuno b = pokemonEnmy
+
+const btnbattle = document.getElementsByName(".btnBattlePokemons")
 
 function battlePokemon(){
  let battle =  Math.round(Math.random() * 2)
 
- console.log(battle)
+ battlePokemon(battle,1)
 }
