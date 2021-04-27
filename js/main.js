@@ -169,19 +169,33 @@ $chosePlayerName.classList.toggle('start')
 $chosePokemon.classList.toggle('choosePokemon')
 }
 //--------------------------pokemon winner battle--------------------------------------------------//
+const pokemonL = document.getElementById('NamePokemon-5')
+const pokemonR = document.getElementById('namePokemon-4')
+const btnBattle = document.querySelector(".btnBattlePokemons")
+
 const pA = document.getElementById('pokemon5')
 const pB = document.getElementById('pokemonList4')
 const level = document.getElementById('')
-const btnBattle = document.querySelector(".btnBattlePokemons")
 
-btnBattle.addEventListener('click', addNamePokemonWinner)
-
-function addNamePokemonWinner(pA, pB, level){
-  if(pA.level >= pB.level){
-    return  `${ "Well than, the winner is" + pA};`
+function ramdomWinner(pokemonWinnerName, pokemonWinnerName_2){
+  if(pokemonWinnerName_2 <= pokemonWinnerName){
+    alert("Well than, the winner is " + pokemonWinnerName);
   }else{
-    return `${ "The nex time you will Win" + pB};`
+    alert("Ups...The winner was " + pokemonWinnerName_2 + " The nex time you will Win") ;
   }
-  
 }
-console.log(addNamePokemonWinner(pA))
+
+
+btnBattle.addEventListener('click',addNamePokemonWinner)
+
+function addNamePokemonWinner(){
+  const infoP5 = document.getElementById("pokemon5");
+
+  const infoP4 = document.getElementById("pokemon-4");
+
+  const pokemonWinnerName = infoP5.querySelector("h4").textContent;
+
+  const pokemonWinnerName_2 = infoP4.querySelector("h4").textContent;
+
+  ramdomWinner(pokemonWinnerName, pokemonWinnerName_2)
+} 
