@@ -130,7 +130,9 @@ body{
     display: none;
 }
 
-
+.pokemonHP{
+    display: none;
+}
 /*---------------------------------------------headerbattle-------------------------------------------------*/
 .namePlayer{
     height: 95px;
@@ -205,7 +207,7 @@ body{
     width: 720px;
     height: 400px;
     padding-bottom: 20px;
-    margin-top: -167px;
+    margin-top: -205px;
 }
 .namePokemon-4{
     text-transform: uppercase;
@@ -238,7 +240,7 @@ body{
     border-radius: 10px;
 }
 .infoPokemonMoves{
-    height: 195px;
+    height: 220px;
     width: 260px;
     background-color: #fff;
     margin-top: -197px;
@@ -247,9 +249,10 @@ body{
     border-radius: 10px;
     color: cornflowerblue;
     font-family: Anton;
+    text-transform: uppercase;
 }
 .infoPokemon_4Moves{
-    height: 195px;
+    height: 220px;
     width: 240px;
     background-color: #fff;
     padding: 12px;
@@ -280,5 +283,9 @@ body{
 	transform: scale(1.1);
 }
 /*-----------------------------------------------------------------------------------------*/
-
-
+/*    @media (min-width: 600px) {
+        .container{
+        margin: 0 auto
+        }
+    }
+*/

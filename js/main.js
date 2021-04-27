@@ -39,10 +39,14 @@ function consultarPokemon(id, num){
    let skills_2 = item.getElementsByTagName("h6")[0]
    skills_2.textContent = pokemon.moves[1].move.name
 
+   let level = item.getElementsByTagName("h4")[0]
+   level.textContent = pokemon.base_experience
+
  }
 consultarPokemones()
 //--------------------------------------pokemon chosen-------------------------------------------------------//
 const btnCardPokemon = document.querySelectorAll(".btnPokemonPiker")
+
 btnCardPokemon.forEach(addCardbtn =>{
   addCardbtn.addEventListener('click', addCardClicked);
 })
@@ -56,12 +60,13 @@ function addCardClicked(ev){
   const pName = pokemonsCards.querySelector("h1").textContent;
   const pImg = pokemonsCards.querySelector("img").src;
   const pMoves = pokemonsCards.querySelector("h5").textContent;
-  const pMoves_2 = pokemonsCards.querySelector("h6").textContent
-  paintChosenPokemon(pName, pImg, pMoves, pMoves_2)
+  const pMoves_2 = pokemonsCards.querySelector("h6").textContent;
+  const pLevel = pokemonsCards.querySelector("h4").textContent;
+  paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel)
 }
 
 
-function paintChosenPokemon(pName, pImg, pMoves, pMoves_2){
+function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   const paintPokemon = document.querySelector('.pokemon-5')
   const paintPokemonContent = 
       `<div class="pokemon-5" id="pokemon5">
@@ -69,6 +74,7 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2){
           <div class="infoPokemonMoves">
             <h1 class="NamePokemon-5">${pName}</h1>
             <p class="lifePokemonChosen">100%</p>
+            <h4>Level: ${pLevel}</h4>
             <h5>${pMoves}</h5>
             <h6 class="pokemonSkills">${pMoves_2}</h6>
           </div>
@@ -110,6 +116,9 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2){
 
    let skills_2 = otherItem.getElementsByTagName("h6")[0]
    skills_2.textContent = pokemon.moves[1].move.name
+
+   let level = otherItem.getElementsByTagName("h4")[0]
+   level.textContent = `${"Level: " + pokemon.base_experience}`
 
   }
   
@@ -159,14 +168,20 @@ function accept(){
 $chosePlayerName.classList.toggle('start')
 $chosePokemon.classList.toggle('choosePokemon')
 }
-//---------------------------battle--------------------------------------------------//
-const yourPokemon = document.getElementById('pokemon5')
-const pokemonEnmy = document.getElementById('pokemon-4')
+//--------------------------pokemon winner battle--------------------------------------------------//
+const pA = document.getElementById('pokemon5')
+const pB = document.getElementById('pokemonList4')
+const level = document.getElementById('')
+const btnBattle = document.querySelector(".btnBattlePokemons")
 
-const btnbattle = document.getElementsByName(".btnBattlePokemons")
+btnBattle.addEventListener('click', addNamePokemonWinner)
 
-function battlePokemon(){
- let battle =  Math.round(Math.random() * 2)
-
- battlePokemon(battle,1)
+function addNamePokemonWinner(pA, pB, level){
+  if(pA.level >= pB.level){
+    return  `${ "Well than, the winner is" + pA};`
+  }else{
+    return `${ "The nex time you will Win" + pB};`
+  }
+  
 }
+console.log(addNamePokemonWinner(pA))
