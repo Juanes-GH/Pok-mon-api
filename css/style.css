@@ -74,7 +74,7 @@ body{
 .pokemon-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center
 }
 .pokemon-1, .pokemon_2, .pokemon-3{
     width: 285px;
@@ -196,16 +196,17 @@ body{
 }
 
 .container-battleC{
-    background-color: #82e8a0 ;
+    FONT-VARIANT: JIS83;
+    background-color: #82e8a0;
     width: auto;
-    height: 600px;
+    height: 500px;
     margin-top: 60px;
 }
 .battleCamp{
     display: block;
     margin: 0 auto;
-    width: 720px;
-    height: 400px;
+    width: auto;
+    height: auto;
     padding-bottom: 20px;
     margin-top: -205px;
 }
@@ -213,19 +214,19 @@ body{
     text-transform: uppercase;
 }
 .imgPokemon4{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     position: absolute;
-    left: 775px;
-    margin-top: 123px;
+    left: 530px;
+    margin-top: 50px;
 }
 .imgPokemon5{
     width: 205px;
     height: 205px;
     position: absolute;
-    left: 369px;
-    margin-top: -40px;
+    left: 300px;
     transform: scaleX(-1);
+    margin-top: 10px;
 }
 .lifePokemonEnemy{
     width: 130px;
@@ -259,10 +260,9 @@ body{
     border-radius: 10px;
     color: cornflowerblue;
     font-size: 16px;
-    position: relative;
-    left: 1010px;
     top: 47px;
     font-family: Anton;
+    margin-left: auto;
 }
 .btnBattlePokemons{
     padding: 5px;
@@ -283,9 +283,9 @@ body{
 	transform: scale(1.1);
 }
 /*-----------------------------------------------------------------------------------------*/
-/*    @media (min-width: 600px) {
-        .container{
-        margin: 0 auto
-        }
+   @media (min-width: 600px) {
+       .infoPokemon_4Moves{
+
     }
-*/
+
+   }

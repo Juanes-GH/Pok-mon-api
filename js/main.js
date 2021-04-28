@@ -69,7 +69,7 @@ function addCardClicked(ev){
 function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   const paintPokemon = document.querySelector('.pokemon-5')
   const paintPokemonContent = 
-      `<div class="pokemon-5" id="pokemon5">
+      `<div class=" col-xs-3 pokemon-5" id="pokemon5">
         <img  src=${pImg} alt="" class="imgPokemon5">
           <div class="infoPokemonMoves">
             <h1 class="NamePokemon-5">${pName}</h1>
