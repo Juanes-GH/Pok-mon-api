@@ -244,7 +244,7 @@ body{
     width: 260px;
     background-color: #fff;
     margin-top: -197px;
-    margin-left: 13px;
+    margin-left: 2px;
     padding: 12px;
     border-radius: 10px;
     color: cornflowerblue;
@@ -260,7 +260,7 @@ body{
     color: cornflowerblue;
     font-size: 16px;
     position: relative;
-    left: 1090px;
+    left: 1010px;
     top: 47px;
     font-family: Anton;
 }
