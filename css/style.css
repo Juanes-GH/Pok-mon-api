@@ -283,7 +283,7 @@ body{
 	transform: scale(1.1);
 }
 /*-----------------------------------------------------------------------------------------*/
-   @media (max-width: 1800px) and (orientation: landscape) {
+   @media (max-width: 1810px) and (orientation: landscape) {
        .imgPokemon5{
         width: 205px;
         height: 205px;
