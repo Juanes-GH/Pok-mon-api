@@ -226,7 +226,7 @@ body{
     position: absolute;
     left: 300px;
     transform: scaleX(-1);
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .lifePokemonEnemy{
     width: 130px;
