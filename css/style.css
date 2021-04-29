@@ -283,9 +283,21 @@ body{
 	transform: scale(1.1);
 }
 /*-----------------------------------------------------------------------------------------*/
-   @media (min-width: 600px) {
-       .infoPokemon_4Moves{
-
+   @media (min-width: 1200px) and (orientation: landscape) {
+       .imgPokemon5{
+        width: 205px;
+        height: 205px;
+        position: absolute;
+        left: 363px;
+        transform: scaleX(-1);
+        margin-top: 0px;
+    }
+    .imgPokemon4 {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        left: 627px;
+        margin-top: 50px;
     }
 
    }
