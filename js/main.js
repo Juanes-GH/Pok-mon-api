@@ -172,6 +172,8 @@ $chosePokemon.classList.toggle('choosePokemon')
 const pokemonL = document.getElementById('NamePokemon-5')
 const pokemonR = document.getElementById('namePokemon-4')
 const btnBattle = document.querySelector(".btnBattlePokemons")
+const modal = document.getElementById("modalContainer")
+const modal_2 = document.getElementById("modalContainer_2")
 
 const pA = document.getElementById('pokemon5')
 const pB = document.getElementById('pokemonList4')
@@ -179,11 +181,12 @@ const level = document.getElementById('')
 
 function ramdomWinner(pokemonWinnerName, pokemonWinnerName_2){
   if(pokemonWinnerName_2 <= pokemonWinnerName){
-    alert("Well than, the winner is " + pokemonWinnerName);
+    alert("Well than, you have win :) ");
   }else{
-    alert("Ups...The winner was " + pokemonWinnerName_2 + " The nex time you will Win") ;
+    alert("Ups...it's will be the nex time, you lose :( ");
   }
 }
+
 
 
 btnBattle.addEventListener('click',addNamePokemonWinner)
@@ -199,3 +202,4 @@ function addNamePokemonWinner(){
 
   ramdomWinner(pokemonWinnerName, pokemonWinnerName_2)
 } 
+
