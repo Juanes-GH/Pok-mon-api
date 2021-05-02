@@ -46,12 +46,13 @@ function consultarPokemon(id, num){
 consultarPokemones()
 //--------------------------------------pokemon chosen-------------------------------------------------------//
 const btnCardPokemon = document.querySelectorAll(".btnPokemonPiker")
+const addCardPokemonContainer = document.querySelector('.pokemon-list')
 
 btnCardPokemon.forEach(addCardbtn =>{
   addCardbtn.addEventListener('click', addCardClicked);
 })
 
-const addCardPokemonContainer = document.querySelector('.pokemon-list')
+
 
 function addCardClicked(ev){
   const button = ev.target;
@@ -73,7 +74,9 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
         <img  src=${pImg} alt="" class="imgPokemon5">
           <div class="infoPokemonMoves">
             <h1 class="NamePokemon-5">${pName}</h1>
-            <p class="lifePokemonChosen">100%</p>
+
+            <h2 class="lifePokemon5" id="pokemon5Life"> Life : 100 </h2> 
+            
             <h4>Level: ${pLevel}</h4>
             <h5>${pMoves}</h5>
             <h6 class="pokemonSkills">${pMoves_2}</h6>
@@ -83,6 +86,32 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   paintPokemon.innerHTML = paintPokemonContent
   
 }
+//--------------------------------------show the battleground-------------------------------------------------------//
+
+ function showTheCam(){
+   let div1 = document.getElementById('choosePokemon');
+   let div2 = document.getElementById('container__turno');
+   if(div1.style.display == 'block'){
+      div2.style.display = 'none';
+      div1.style.display = 'block';
+   }else{
+    div2.style.display = 'block';
+    div1.style.display = 'none';
+   };
+ }
+  
+/*function callThePokemonSelector(){
+  let namediv = document.getElementById('container__choose-playerName');
+  let pickPokemon = document.getElementById('choosePokemon')
+  if(namediv.style.display == 'block'){
+    pickPokemon.style.display = 'none';
+    namediv.style.display = 'block';
+  }else{
+    pickPokemon.style.display = 'block';
+    namediv.style.display = 'none';
+  
+  }
+}*/
 
  //---------------------------------------pokemon4---------------------------------------------------------//
  let newList = document.getElementById("pokemonList4")
@@ -124,14 +153,14 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   
   consoultPokemons()
 //---------------------------Nametrainer-------------------------------------------------//  
-const $chosePlayerName  = document.getElementById('container__choose-playerName')
-const $btnPlayer      = document.getElementById('PlayerName')
-const $formName			= document.getElementById('formName')
-const $p1 				= document.getElementById('p1')
-const $txtPlayer 		= document.getElementById('txtPlayerName')
-const $playerName1 		= document.getElementById('namePlayer1')
-const $turno 			= document.getElementById('container__turno')
-const $chosePokemon = document.getElementById('choosePokemon')
+const $chosePlayerName    = document.getElementById('container__choose-playerName')
+const $btnPlayer          = document.getElementById('PlayerName')
+const $formName			      = document.getElementById('formName')
+const $p1 				        = document.getElementById('p1')
+const $txtPlayer 		      = document.getElementById('txtPlayerName')
+const $playerName1 		    = document.getElementById('namePlayer1')
+const $turno 			        = document.getElementById('container__turno')
+const $chosePokemon       = document.getElementById('choosePokemon')
 
 var namePlayer1
 var turno   = 1
@@ -168,38 +197,122 @@ function accept(){
 $chosePlayerName.classList.toggle('start')
 $chosePokemon.classList.toggle('choosePokemon')
 }
-//--------------------------pokemon winner battle--------------------------------------------------//
-const pokemonL = document.getElementById('NamePokemon-5')
-const pokemonR = document.getElementById('namePokemon-4')
-const btnBattle = document.querySelector(".btnBattlePokemons")
-const modal = document.getElementById("modalContainer")
-const modal_2 = document.getElementById("modalContainer_2")
+//--------------------------pokemon battle--------------------------------------------------//
 
-const pA = document.getElementById('pokemon5')
-const pB = document.getElementById('pokemonList4')
-const level = document.getElementById('')
-
-function ramdomWinner(pokemonWinnerName, pokemonWinnerName_2){
-  if(pokemonWinnerName_2 <= pokemonWinnerName){
-    alert("Well than, you have win :) ");
-  }else{
-    alert("Ups...it's will be the nex time, you lose :( ");
-  }
-}
+const btnPokemon_S  =   document.getElementById("containerBtnBattle")
+const pokemonL      =   document.getElementById('NamePokemon-5')
+const pokemonR      =   document.getElementById('namePokemon-4')
+const btnBattle     =   document.querySelector(".btnBattlePokemons")
+const modal         =   document.getElementById("modalContainer")
+const modal_2       =   document.getElementById("modalContainer_2")
+const pA            =   document.getElementById('pokemon5')
+const pB            =   document.getElementById('pokemonList4')
+const level         =   document.getElementById('')
 
 
 
 btnBattle.addEventListener('click',addNamePokemonWinner)
+
+
 
 function addNamePokemonWinner(){
   const infoP5 = document.getElementById("pokemon5");
 
   const infoP4 = document.getElementById("pokemon-4");
 
-  const pokemonWinnerName = infoP5.querySelector("h4").textContent;
 
-  const pokemonWinnerName_2 = infoP4.querySelector("h4").textContent;
+  const name_p1 = infoP5.querySelector("h1").textContent;
+  const name_p2 = infoP4.querySelector("h1").textContent
 
-  ramdomWinner(pokemonWinnerName, pokemonWinnerName_2)
-} 
+  paintComents(name_p1, name_p2)
+}
 
+function paintComents(name_p1, name_p2){
+  const cometBattle = document.querySelector('.pokemonBattleComentDiv')
+  const paintCometBattle= 
+      `<div class="txtOftheBattle">
+        <div class="row">
+          <div class="col-xs-10 col-md-12 col-lg-12">
+
+            <p>The first in attacks is ${name_p1}, his attack is of ${attackDamage}</p>
+            <p>${name_p2} strikes back, his attack is of ${attackDamage_2} </p>
+
+          </div>
+        </div>
+      </div>`;
+      
+      cometBattle.innerHTML = paintCometBattle;
+}
+
+
+let attackDamage =  Math.round(Math.random() * 80)
+let attackDamage_2 =  Math.round(Math.random() * 80)
+
+btnBattle.addEventListener('click', callLife)
+
+      function callLife() {
+
+         let pokemon1_Life = pA.getElementsByTagName('h2')[0]
+         pokemon1_Life.textContent = 100 - `${attackDamage_2}`;
+         
+         let pokemon2_Life = pB.getElementsByTagName('h2')[0]
+         pokemon2_Life.textContent = 100 - `${attackDamage}`
+
+        SeeThewinnerPokemonLife()
+      }
+
+function SeeThewinnerPokemonLife(){
+  for ( callLife = 0; callLife < 5; callLife++) {
+    
+    console.log('');
+  }
+}
+//---------------------------------------------------------------------------//
+
+
+/* let attackDamage_1 =  Math.round(Math.random() * 80)
+let attackDamage_2_2 =  Math.round(Math.random() * 80)
+
+btnBattle.addEventListener('click', otherComet)
+
+function otherComet(){
+
+  const infoP5_2 = document.getElementById("pokemon5");
+
+  const infoP4_2 = document.getElementById("pokemon-4");
+
+
+  const name_p1_2 = infoP5_2.querySelector("h1").textContent;
+  const name_p2_2 = infoP4_2.querySelector("h1").textContent
+
+  paintComents_2(name_p1_2, name_p2_2)
+}
+
+function paintComents_2(name_p1_2, name_p2_2){
+  const cometBattle_2 = document.querySelector('.pokemonBattleComentDiv_2')
+  const paintCometBattle_2= 
+      `<div class="txtOftheBattle">
+        <div class="row">
+          <div class="col-xs-10 col-md-12 col-lg-12">
+
+            <p> ${name_p1_2} attacks,  the attack is of ${attackDamage_1}</p>
+            <p>${name_p2_2} strikes back, his attack is of ${attackDamage_2_2} </p>
+
+          </div>
+        </div>
+      </div>`;
+      
+      cometBattle_2.innerHTML = paintCometBattle_2;
+}
+
+//btnBattle.addEventListener('click', SeeThewinnerPokemonLife)
+    
+function SeeThewinnerPokemonLife(pokemon1_Life, pokemon2_Life){
+
+  let pokemon_Life_Atack = pA.getElementsByTagName('h2')[0]
+  pokemon_Life_Atack.textContent = `${pokemon1_Life}` - `${attackDamage_1}` 
+
+  let pokemon_Life_Atack2 = pA.getElementsByTagName('h2')[0]
+  pokemon_Life_Atack2.textContent = `${pokemon2_Life}` - `${attackDamage_2_2}`
+
+}*/
