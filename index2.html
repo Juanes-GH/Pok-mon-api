@@ -7,13 +7,16 @@
       .txt{
         background-color: brown;
       }
+      .btn{
+        background-color: cyan;
+      }
     </style>
 </head>
 <body>
   <progress class="w3-green" id="bb" value="" max="100">70%</progress>
   <button class="btn" id="btn_1" onclick="thefunction()">PULSA</button>
 
-  <div id="text" class="txt">
+  <div id="text" class="txt" style="display: none;">
     <h1>hola esto es una prueba</h1>
   </div>
 
@@ -23,30 +26,22 @@
   </div>
 
     <script>
-const aleatorio = Math.floor(Math.random()*80)
 
-const div = document.getElementById("text1")
+var click=0;
+function thefunction(){
 
-const texto = div.querySelector('h1').textContent
-const post = div.querySelector('h2').textContent
+   var stern_style = document.getElementById('text1').style;
+   var dos = document.getElementById('text').style    
 
-function pintardiv(){
-  const pp = document.getElementById('text1')
-  const nuevoPP = 
-  `
-  <div id="text1" class="txt1" style="display: none;">
-    <h1>ni un brillo pelao ${aleatorio}</h1>
-    <h2>tampoco asi hp</h2>
-  </div>
-  `
-  pp.innerHTML = nuevoPP
+   if(click != 0){
+    stern_style.style.display == 'block';
+      click = 0;
+    }
+    else if(click == 0){
+      stern_style.style.display== 'block';
+      click = 1;
+    }
 }
-
-    var myTotal = 2
-      eval("console.log(`${texto}`,`${post}` );".repeat(myTotal));
-
-
-       
 
 /*
 var myTotal = 4
