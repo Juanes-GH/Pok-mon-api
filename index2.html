@@ -2,15 +2,57 @@
 <html>
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link href="./css/style.css" rel="stylesheet">
     <title>POKE BATTLE</title>
+    <style>
+      .txt{
+        background-color: brown;
+      }
+    </style>
 </head>
 <body>
   <progress class="w3-green" id="bb" value="" max="100">70%</progress>
+  <button class="btn" id="btn_1" onclick="thefunction()">PULSA</button>
 
+  <div id="text" class="txt">
+    <h1>hola esto es una prueba</h1>
+  </div>
+
+  <div id="text1" class="txt1" style="display: none;">
+    <h1>ni un brillo pelao</h1>
+    <h2>tampoco asi hp</h2>
+  </div>
 
     <script>
+const aleatorio = Math.floor(Math.random()*80)
+
+const div = document.getElementById("text1")
+
+const texto = div.querySelector('h1').textContent
+const post = div.querySelector('h2').textContent
+
+function pintardiv(){
+  const pp = document.getElementById('text1')
+  const nuevoPP = 
+  `
+  <div id="text1" class="txt1" style="display: none;">
+    <h1>ni un brillo pelao ${aleatorio}</h1>
+    <h2>tampoco asi hp</h2>
+  </div>
+  `
+  pp.innerHTML = nuevoPP
+}
+
+    var myTotal = 2
+      eval("console.log(`${texto}`,`${post}` );".repeat(myTotal));
+
+
        
+
+/*
+var myTotal = 4
+var strCode = "console.log('hola');".repeat(myTotal);
+(new Function(strCode))();
+*/
       const numero = Math.floor(Math.random() * 80)
 
       window.addEventListener('load', cambiaValores);

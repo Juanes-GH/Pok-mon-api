@@ -214,7 +214,6 @@ const level         =   document.getElementById('')
 btnBattle.addEventListener('click',addNamePokemonWinner)
 
 
-
 function addNamePokemonWinner(){
   const infoP5 = document.getElementById("pokemon5");
 
