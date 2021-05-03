@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Londrina+Solid:wght@900&family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kiwi+Maru:wght@300&family=Londrina+Solid:wght@900&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 body{
     background-color: #212121;
@@ -199,7 +200,7 @@ body{
     FONT-VARIANT: JIS83;
     background-color: #82e8a0;
     width: auto;
-    height: 500px;
+    height: auto;
     margin-top: 60px;
 }
 .battleCamp{
@@ -228,18 +229,7 @@ body{
     transform: scaleX(-1);
     margin-top: 0px;
 }
-.lifePokemonEnemy{
-    width: 130px;
-    height: 30px;
-    background-color: greenyellow;
-    border-radius: 10px;
-}
-.lifePokemonChosen{
-    width: 130px;
-    height: 30px;
-    background-color: greenyellow;
-    border-radius: 10px;
-}
+
 .infoPokemonMoves{
     height: 220px;
     width: 260px;
@@ -281,6 +271,19 @@ body{
 .btnBattlePokemons:hover{
     box-shadow: 0px 0px 7px 2px #88c3ee;
 	transform: scale(1.1);
+}
+.txtOftheBattle{
+    font-family: Quicksand;
+    background-color: #88c3ee;
+    font-family: Anton;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.lifePokemon4, .lifePokemon5{
+    font-family: Anton;
+    color: #82e8a0;
 }
 /*-----------------------------------------------------------------------------------------*/
    @media (min-width: 1808px) and (orientation: landscape) {
