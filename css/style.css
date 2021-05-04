@@ -231,7 +231,7 @@ body{
 }
 
 .infoPokemonMoves{
-    height: 220px;
+    height: 245px;
     width: 260px;
     background-color: #fff;
     margin-top: -197px;
@@ -254,24 +254,19 @@ body{
     font-family: Anton;
     margin-left: auto;
 }
-.btnBattlePokemons{
+.pokemonSkills, .btn_pokemonAtack1{
     padding: 5px;
     border-radius: 5px;
     font-family: Anton;
-    letter-spacing: .1em;
     outline: none;
     background-color: #0691c0;
     color: #fff;
-    margin: 0 auto;
     display: block;
     letter-spacing: 5px;
-    width: 133px;
+    width: 210px;
+    margin-bottom: 10px;
 }
 
-.btnBattlePokemons:hover{
-    box-shadow: 0px 0px 7px 2px #88c3ee;
-	transform: scale(1.1);
-}
 
 .txtOftheBattle{
     font-family: Quicksand;

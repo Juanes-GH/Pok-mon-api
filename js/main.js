@@ -74,8 +74,8 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
             <h2 class="lifePokemon5" id="pokemon5Life"> Life : 100 </h2> 
             
             <h4>Level: ${pLevel}</h4>
-            <h5>${pMoves}</h5>
-            <h6 class="pokemonSkills">${pMoves_2}</h6>
+            <button id="btn_pokemonAtack1" onclick="paintAbilityOne(), paintAttack_Enemy()">${pMoves}</button>
+            <button id="pokemonSkills" onclick="attack_Move2(), paintAttack_Enemy2()">${pMoves_2}</button>
           </div>
     </div>`;
 
@@ -179,17 +179,14 @@ $chosePlayerName.classList.toggle('start')
 $chosePokemon.classList.toggle('choosePokemon')
 }
 //--------------------------pokemon battle--------------------------------------------------//
-const btnPokemon_S             =   document.getElementById("containerBtnBattle")
-const pokemonL                 =   document.getElementById('NamePokemon-5')
-const pokemonR                 =   document.getElementById('namePokemon-4')
-const btnBattle                =   document.querySelector(".btnBattlePokemons")
-const modal                    =   document.getElementById("modalContainer")
-const modal_2                  =   document.getElementById("modalContainer_2")
-const div_Pokemon_left         =   document.getElementById('pokemon5')
-const div_Pokemon_rieght       =   document.getElementById('pokemonList4')
-const level                    =   document.getElementById('')
-
-btnBattle.addEventListener('click',addNamePokemonWinner)
+const btnPokemon_S                =   document.getElementById("containerBtnBattle")
+const div_NamePokemon5            =   document.getElementById('NamePokemon-5')
+const div_NamePokemon4            =   document.getElementById('namePokemon-4')
+const div_Pokemon_left            =   document.getElementById('pokemon5')
+const div_Pokemon_rieght          =   document.getElementById('pokemonList4')
+const life_Div                    =   document.getElementById('pokemon5Life')
+const life_Div_MyPokemon          =   document.getElementById('life_Pokemon_4')
+const div_ContainerPokemonWinner  = document.getElementById('pokemonBattleComentDiv')
 
 function addNamePokemonWinner(){
   const infoP5 = document.getElementById("pokemon5");
@@ -203,45 +200,51 @@ function addNamePokemonWinner(){
   paintComents(name_p1, name_p2)
 }
 
-function paintComents(name_p1, name_p2){
-  const cometBattle = document.querySelector('.pokemonBattleComentDiv')
-  const paintCometBattle= 
-      `<div class="txtOftheBattle">
-        <div class="row">
-          <div class="col-xs-6 col-md-6 col-lg-6 txtOftheBattle_1">
+ 
+let attackDamage_5 = Math.round(Math.random()* 90)
+let attackDamage_4 =  Math.round(Math.random() * 150)
 
-            <p>The first in attacks is ${name_p1}, his attack is of ${attackDamage}</p>
-            <p>${name_p2} strikes back, his attack is of ${attackDamage_2} </p>
 
-          </div>
-         
-        </div>
-      </div>`;
-      
-      cometBattle.innerHTML = paintCometBattle;
+function paintAbilityOne(){
+  let comet_pokemon = div_Pokemon_rieght.getElementsByTagName('h2')[0]
+comet_pokemon.textContent = `${attackDamage_5}`;
+
+}
+function paintAttack_Enemy(){
+  let pokemonEnemyAtck = div_Pokemon_left.getElementsByTagName('h2')[0]
+  pokemonEnemyAtck.textContent = `${enemy_atack}`;
+
 }
 
-function damage_Pokemons(){
-  let attackDamage =  Math.round(Math.random() * 80)
-  let attackDamage_2 =  Math.round(Math.random() * 80)
-
-  damage_Pokemons(attackDamage)
-  damage_Pokemons(attackDamage_2)
+function attack_Move2(){
+  let comet_pokemon_2 = div_Pokemon_rieght.getElementsByTagName('h2')[0]
+  comet_pokemon_2.textContent = `${attackDamage_4}` - `${attackDamage_5}`
 }
 
+function paintAttack_Enemy2(){
+  let pokemonEnemyAtck = div_Pokemon_left.getElementsByTagName('h2')[0]
+  pokemonEnemyAtck.textContent =  `${enemy_atack}` - `${enemy_atack2}`;
 
-//btnBattle.addEventListener('click', callLife)
+}
 
-      function callLife() {
+let enemy_atack = Math.round(Math.random()* 90)
+let enemy_atack2 = Math.round(Math.random()* 80)
 
-         let pokemon1_Life = div_Pokemon_left.getElementsByTagName('h2')[0]
-         pokemon1_Life.textContent = 100 - `${attackDamage_2}`;
-         
-         let pokemon2_Life = div_Pokemon_rieght.getElementsByTagName('h2')[0]
-         pokemon2_Life.textContent = 100 - `${attackDamage}`
-
-      }
-      paintComents();
-//---------------------------------------------------------------------------//
-
+function x (){
+  if(div_Pokemon_rieght <= 0){
+    const paintWinner = document.getElementById('pokemonComet')
+    const addWinner = 
+      ` <div class="pokemonBattleComentDiv" id="pokemonComet">
+          <p>aaddsdfs</p>
+        </div>`
+        paintWinner.innerHTML = addWinner
+  }else if(div_Pokemon_left <= 0){
+    const paintLoser = document.getElementById('pokemonComet')
+    const addLser = 
+      ` <div class="pokemonBattleComentDiv" id="pokemonComet">
+          <p>aaddsdfs</p>
+        </div>`
+        paintLoser.innerHTML = addLser
+  }
+}
 
