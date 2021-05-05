@@ -200,7 +200,7 @@ body{
     FONT-VARIANT: JIS83;
     background-color: #82e8a0;
     width: auto;
-    height: 540px;
+    height: 550px;
     margin-top: 60px;
 }
 .battleCamp{
@@ -254,40 +254,30 @@ body{
     font-family: Anton;
     margin-left: auto;
 }
-.pokemonSkills, .btn_pokemonAtack1{
-    padding: 5px;
-    border-radius: 5px;
-    font-family: Anton;
-    outline: none;
+
+.btn_battle_{
     background-color: #0691c0;
     color: #fff;
-    display: block;
-    letter-spacing: 5px;
-    width: 210px;
-    margin-bottom: 10px;
-}
-
-
-.txtOftheBattle{
+    border-radius: 5px;
     font-family: Quicksand;
-    background-color: #3bcbc8;
-    padding-left: 20px;
-    padding-top: 10px;
-    border-radius: 15px;
+    margin: 0 auto;
+    display: block
 }
-
-.lifePokemon4, .lifePokemon5{
+.pokemonBattleComentDiv{
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 460px;
+    border-radius: 10px;
+    margin-top: 10px;
     font-family: Anton;
-    color: #82e8a0;
+    color: #0691c0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
 }
 
-.txtOftheBattle_2{
-    width: 380px;
-    padding: 12px;
-    margin-left: auto;
-    margin-top: -90px;
-    background-color: #99ece9;
-}
+
 /*-----------------------------------------------------------------------------------------*/
    @media (min-width: 1808px) and (orientation: landscape) {
        .imgPokemon5{
