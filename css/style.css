@@ -238,7 +238,7 @@ body{
     margin-left: 2px;
     padding: 12px;
     border-radius: 10px;
-    color: cornflowerblue;
+    color: #88c3ee;
     font-family: Anton;
     text-transform: uppercase;
 }
@@ -248,7 +248,7 @@ body{
     background-color: #fff;
     padding: 12px;
     border-radius: 10px;
-    color: cornflowerblue;
+    color: #88c3ee;
     font-size: 16px;
     top: 47px;
     font-family: Anton;
@@ -276,7 +276,12 @@ body{
     letter-spacing: 1px;
 
 }
-
+.NamePokemon-5, .namePokemon-4{
+    color: cornflowerblue;
+}
+.lifePokemon5, .lifePokemon4{
+    color: #82e8a0;
+}
 
 /*-----------------------------------------------------------------------------------------*/
    @media (min-width: 1808px) and (orientation: landscape) {

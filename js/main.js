@@ -195,17 +195,6 @@ function paint_restLive(){
   paintComents(name_p1, name_p2)
 }
 
-btnBattle.addEventListener('click', restLive)
-
-function restLive(){
-  let pokemon1_Life = $idPokemon_5.querySelector("h2")
-  pokemon1_Life.textContent =  100 - `${attackDamage_2}`;
-  
-  let pokemon2_Life = $idPokemon_4.querySelector("h2")
- pokemon2_Life.textContent =  100 - `${attackDamage}`;
-
-}
-
 
 function paintComents(name_p1, name_p2){
 
@@ -214,17 +203,29 @@ function paintComents(name_p1, name_p2){
       `<div class="txtOftheBattle">
         <div class="row">
           <div class="col-xs-6 col-md-6 col-lg-6 pokemonBattleComentDiv">
-            <p>The first in attacks is ${name_p1}, his attack is of ${attackDamage}</p>
+            <p>The first in attack is ${name_p1}, his attack is of ${attackDamage}</p>
             <p>${name_p2} strikes back, his attack is of ${attackDamage_2} </p>
           </div>
          
         </div>
       </div>`;
+
+     cometBattle.innerHTML = paintCometBattle;
       
-      cometBattle.innerHTML = paintCometBattle;
 }
+
+btnBattle.addEventListener('click', restLive)
+
+function restLive(event){
+  let pokemon1_Life = $idPokemon_5.querySelector("h2")
+  pokemon1_Life.textContent =  100 - `${attackDamage_2}`;
+  
+  let pokemon2_Life = $idPokemon_4.querySelector("h2")
+ pokemon2_Life.textContent =  100 - `${attackDamage}`;
+
+event.stopPropagation()
+}
+
 
   let attackDamage =  Math.round(Math.random() * 80)
   let attackDamage_2 =  Math.round(Math.random() * 80)
-
-
