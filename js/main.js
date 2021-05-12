@@ -184,7 +184,7 @@ const $life_Div_EnemiPokemon      =   document.getElementById('life_Pokemon_4')
 const btnBattle                   =   document.getElementById('btn_battle')
 const $idPokemon_5                =   document.getElementById('pokemon5')
 const $idPokemon_4                =   document.getElementById('pokemon-4')
-
+const $battle_coments             =   document.getElementById('pokemonComet')
 
 btnBattle.addEventListener('click', paint_restLive)
 
@@ -197,22 +197,14 @@ function paint_restLive(){
 
 
 function paintComents(name_p1, name_p2){
+let battletxt = $battle_coments.getElementsByTagName('p')[0]
+battletxt.textContent =`${"The first in attack is " + name_p1 + " the damge is of " + attackDamage}`;
 
-  const cometBattle = document.getElementById('pokemonComet')
-  const paintCometBattle= 
-      `<div class="txtOftheBattle">
-        <div class="row">
-          <div class="col-xs-6 col-md-6 col-lg-6 pokemonBattleComentDiv">
-            <p>The first in attack is ${name_p1}, his attack is of ${attackDamage}</p>
-            <p>${name_p2} strikes back, his attack is of ${attackDamage_2} </p>
-          </div>
-         
-        </div>
-      </div>`;
-
-     cometBattle.innerHTML = paintCometBattle;
+let battletxt_2 = $battle_coments.getElementsByTagName('p')[1]
+battletxt_2.textContent =`${name_p2 + " strikes back, his attack is of " + attackDamage_2}`
       
 }
+
 
 btnBattle.addEventListener('click', restLive)
 
