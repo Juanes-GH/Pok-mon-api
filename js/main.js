@@ -71,7 +71,7 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
           <div class="infoPokemonMoves">
             <h1 class="NamePokemon-5">${pName}</h1>
 
-            <h2 class="lifePokemon5" id="pokemon5Life"> Life : 100 </h2> 
+            <h2 class="lifePokemon5" id="pokemon5Life">  100 </h2> 
             
             <h4 id="levelPokemon5">Level: ${pLevel}</h4>
             <h5 id="btn_pokemonAtack1" class="btn_atacks">${pMoves}</h5>
@@ -82,7 +82,7 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   paintPokemon.innerHTML = paintPokemonContent
   
 }
-//--------------------------------------show the battleground----------------------------------------------------//
+//--------------------------------------show the battleground-------------------//
  function showTheCam(){
    let div1 = document.getElementById('choosePokemon');
    let div2 = document.getElementById('container__turno');
@@ -94,7 +94,7 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
     div1.style.display = 'none';
    };
  }
- //---------------------------------------pokemon4---------------------------------------------------------//
+ //--------------------pokemon4--------------------------------------------//
  let newList = document.getElementById("pokemonList4")
 
  function consoultPokemon(id, name){
@@ -133,7 +133,7 @@ function paintChosenPokemon(pName, pImg, pMoves, pMoves_2, pLevel){
   }
   
   consoultPokemons()
-//---------------------------Nametrainer-------------------------------------------------//  
+//---------------------------Nametrainer-------------------------------------------//  
 const $chosePlayerName    = document.getElementById('container__choose-playerName')
 const $btnPlayer          = document.getElementById('PlayerName')
 const $formName			      = document.getElementById('formName')
@@ -178,7 +178,7 @@ function accept(){
 $chosePlayerName.classList.toggle('start')
 $chosePokemon.classList.toggle('choosePokemon')
 }
-//--------------------------pokemon battle--------------------------------------------------//
+//--------------------------pokemon battle----------------------------------------//
 const $life_Div_MyPokemon         =   document.getElementById('pokemon5Life')
 const $life_Div_EnemiPokemon      =   document.getElementById('life_Pokemon_4')
 const btnBattle                   =   document.getElementById('btn_battle')
@@ -195,29 +195,42 @@ function paint_restLive(){
   paintComents(name_p1, name_p2)
 }
 
-
 function paintComents(name_p1, name_p2){
+
 let battletxt = $battle_coments.getElementsByTagName('p')[0]
-battletxt.textContent =`${"The first in attack is " + name_p1 + " the damge is of " + attackDamage}`;
+battletxt.textContent =`${"The first in attack is " + name_p1 + " the damge is of "}`;
 
 let battletxt_2 = $battle_coments.getElementsByTagName('p')[1]
-battletxt_2.textContent =`${name_p2 + " strikes back, his attack is of " + attackDamage_2}`
+battletxt_2.textContent =`${name_p2 + " strikes back, his attack is of "}`
       
 }
 
-
 btnBattle.addEventListener('click', restLive)
 
-function restLive(event){
-  let pokemon1_Life = $idPokemon_5.querySelector("h2")
-  pokemon1_Life.textContent =  100 - `${attackDamage_2}`;
-  
-  let pokemon2_Life = $idPokemon_4.querySelector("h2")
- pokemon2_Life.textContent =  100 - `${attackDamage}`;
-
-event.stopPropagation()
-}
-
+function restLive(){ 
 
   let attackDamage =  Math.round(Math.random() * 80)
   let attackDamage_2 =  Math.round(Math.random() * 80)
+
+  let pokemon1_Life = $idPokemon_5.querySelector("h2").textContent; // `${100 - attackDamage_2}`;
+  
+  let pokemon2_Life = $idPokemon_4.querySelector("h2").textContent; // `${100 - attackDamage}`
+
+  let restLife_p4 = pokemon2_Life - `${attackDamage}`;
+  let restLife_p5 = pokemon1_Life - `${attackDamage_2}`;
+  paintTheResultOfTheAttacks(restLife_p4, restLife_p5)
+}
+
+function paintTheResultOfTheAttacks(restLife_p4, restLife_p5){
+
+  let h2OfPokemon4 = document.querySelector('.lifePokemon4')
+  let paintTheResultNumber_p4= 
+  ` <h2 class="lifePokemon4" id="life_Pokemon_4">${restLife_p4}</h2> `
+  h2OfPokemon4.innerHTML = paintTheResultNumber_p4
+
+  let h2OfPokemon5 = document.querySelector('.lifePokemon5')
+  let paintTheResultNumber_p5= 
+  `<h2 class="lifePokemon5" id="pokemon5Life"> ${restLife_p5}</h2>`
+  h2OfPokemon5.innerHTML = paintTheResultNumber_p5
+
+}
