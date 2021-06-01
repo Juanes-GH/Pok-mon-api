@@ -185,6 +185,9 @@ const btnBattle                   =   document.getElementById('btn_battle')
 const $idPokemon_5                =   document.getElementById('pokemon5')
 const $idPokemon_4                =   document.getElementById('pokemon-4')
 const $battle_coments             =   document.getElementById('pokemonComet')
+const $alertWinner                =   document.getElementById('alertWinner')
+const $alertLoser                =   document.getElementById('alertLoser')
+
 
 btnBattle.addEventListener('click', paint_restLive)
 
@@ -197,11 +200,11 @@ function paint_restLive(){
 
 function paintComents(name_p1, name_p2){
 
-let battletxt = $battle_coments.getElementsByTagName('p')[0]
-battletxt.textContent =`${"The first in attack is " + name_p1 + " the damge is of "}`;
+  let battletxt = $battle_coments.getElementsByTagName('p')[0]
+  battletxt.textContent =`${"The first in attack is " + name_p1 }`;
 
-let battletxt_2 = $battle_coments.getElementsByTagName('p')[1]
-battletxt_2.textContent =`${name_p2 + " strikes back, his attack is of "}`
+  let battletxt_2 = $battle_coments.getElementsByTagName('p')[1]
+  battletxt_2.textContent =`${name_p2 + " strikes back "}`
       
 }
 
@@ -233,4 +236,25 @@ function paintTheResultOfTheAttacks(restLife_p4, restLife_p5){
   `<h2 class="lifePokemon5" id="pokemon5Life"> ${restLife_p5}</h2>`
   h2OfPokemon5.innerHTML = paintTheResultNumber_p5
 
+  if(restLife_p4 <= 0){
+    let prueba1 = document.querySelector('.alertWinner')
+    let paintPrueba1 = 
+    `<div class="alert alert-success" role="alert" id="alertWinner"">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, Yuo have win the game!!!</p>
+    <hr>
+    <p class="mb-0">Reload if your wont to play again</p>
+  </div>`
+    prueba1.innerHTML = paintPrueba1
+  }else if(restLife_p5 <= 0){
+    let prueba = document.querySelector('.alertLoser')
+    let paintPrueba = 
+    `<div class="alert alert-danger" role="alert" id="alertWinner" ">
+    <h4 class="alert-heading">GAMER OVER!</h4>
+    <p>Aww the nex time will be</p>
+    <hr>
+    <p class="mb-0">Reload if your wont to play again</p>
+    </div>`
+    prueba.innerHTML = paintPrueba
+  }
 }
