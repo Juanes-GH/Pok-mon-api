@@ -282,7 +282,22 @@ body{
 .lifePokemon5, .lifePokemon4{
     color: #82e8a0;
 }
-
+.alertWinner, .alertLoser{
+    position: absolute;
+    margin: 0 auto;
+    left: 40em;
+    top: 791px;
+    opacity: 0.9;
+    width: 408px;
+}
+.btn_reload{
+    background-color: #82e8a0;
+    color: #fff;
+    border-radius: 5px;
+    font-family: Quicksand;
+    margin: 0 auto;
+    margin-block: 6px;
+}
 /*-----------------------------------------------------------------------------------------*/
    @media (min-width: 1808px) and (orientation: landscape) {
        .imgPokemon5{

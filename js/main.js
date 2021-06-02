@@ -240,21 +240,24 @@ function paintTheResultOfTheAttacks(restLife_p4, restLife_p5){
     let prueba1 = document.querySelector('.alertWinner')
     let paintPrueba1 = 
     `<div class="alert alert-success" role="alert" id="alertWinner"">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, Yuo have win the game!!!</p>
-    <hr>
-    <p class="mb-0">Reload if your wont to play again</p>
-  </div>`
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, Yuo have win the game!!!</p>
+      <hr>
+      <p class="mb-0">Reload if your wont to play again</p>
+      <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
+    </div>`
     prueba1.innerHTML = paintPrueba1
   }else if(restLife_p5 <= 0){
     let prueba = document.querySelector('.alertLoser')
     let paintPrueba = 
-    `<div class="alert alert-danger" role="alert" id="alertWinner" ">
-    <h4 class="alert-heading">GAMER OVER!</h4>
-    <p>Aww the nex time will be</p>
-    <hr>
-    <p class="mb-0">Reload if your wont to play again</p>
+    `<div class="alert alert-danger" role="alert" id="alertLoser" ">
+      <h4 class="alert-heading">GAMER OVER!</h4>
+      <p>Aww the nex time will be</p>
+      <hr>
+      <p class="mb-0">Reload if your wont to play again</p>
+      <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
     </div>`
     prueba.innerHTML = paintPrueba
   }
 }
+
