@@ -285,10 +285,11 @@ body{
 .alertWinner, .alertLoser{
     position: absolute;
     margin: 0 auto;
-    left: 19em;
+    left: 299px;
     top: 791px;
     opacity: 0.9;
     width: 408px;
+
 }
 .btn_reload{
     background-color: #82e8a0;
