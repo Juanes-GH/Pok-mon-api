@@ -318,3 +318,22 @@ body{
     }
 
    }
+
+   @media (min-width: 320px) and (orientation: landscape) {
+    .imgPokemon5{
+     width: 205px;
+     height: 205px;
+     position: absolute;
+     left: 714px;
+     transform: scaleX(-1);
+     margin-top: 0px;
+ }
+ .imgPokemon4 {
+     width: 130px;
+     height: 130px;
+     position: absolute;
+     left: 931px;
+     margin-top: 50px;
+ }
+
+}
