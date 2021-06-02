@@ -285,7 +285,7 @@ body{
 .alertWinner, .alertLoser{
     position: absolute;
     margin: 0 auto;
-    left: 40em;
+    left: 19em;
     top: 791px;
     opacity: 0.9;
     width: 408px;
