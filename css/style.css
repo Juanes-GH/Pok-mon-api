@@ -278,14 +278,6 @@ body{
 }
 /*-----------------------------------------------------------------------------------------*/
    @media (max-width: 400px){
-       .alertWinner, .alertLoser{
-        position: absolute;
-        margin: 0 auto;
-        left: 299px;
-        top: 791px;
-        opacity: 0.9;
-        width: 408px;
-     }
      .boxChosePokemon {
         background-color: #0691c0;
         margin-top: 100px;
@@ -296,7 +288,7 @@ body{
         margin-left: 50px;
         margin-right: 50px;
     }
-    .alert-danger {
+    .alertWinner, .alertLoser {
         color: #842029;
         background-color: #f8d7da;
         border-color: #f5c2c7;
