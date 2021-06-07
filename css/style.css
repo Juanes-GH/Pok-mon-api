@@ -289,9 +289,6 @@ body{
         margin-right: 50px;
     }
     .alertWinner, .alertLoser {
-        color: #842029;
-        background-color: #f8d7da;
-        border-color: #f5c2c7;
         margin-left: -236px;
         margin-top: 115px;
         position: relative;
