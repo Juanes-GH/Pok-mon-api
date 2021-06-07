@@ -357,6 +357,14 @@ body{
         flex-direction: row;
         margin-left: 296px;
     }
-    
+    .displayText {
+        font-family: Anton;
+        margin-left: 20px;
+        margin-top: -85px;
+        position: absolute;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-top: -72px;
+    }
    }
 
