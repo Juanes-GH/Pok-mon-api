@@ -288,7 +288,7 @@ body{
         margin-left: 50px;
         margin-right: 50px;
     }
-    .alertWinner, .alertLoser {
+    .alert{
         margin-left: -236px;
         margin-top: 115px;
         position: relative;
