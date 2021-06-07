@@ -10,17 +10,19 @@
 </head>
 <body>
   <div>
-    <img src="./img/logo-pokemon.png" alt="" class="header">
+    <div class="row">
+      <div class="col-12">
+        <img src="./img/logo-pokemon.png" alt="" class="header">
+      </div>
+    </div>
   </div>
   <!-----Name of the trainerpk--->
   <div class="card" id="container__choose-playerName" >
-    <div class="row">
-      <div class="col-xs-10 col-md-11 col-lg-11" >
-        <h1 class="txtCard" class="col-md-1">TELL ME YOUR NAME</h1>
+        <h1 class="txtCard">TELL ME YOUR NAME</h1>
         <img src="./img/profesor.png" alt="D.Pokemon" class="oak">
   <!-----Name of the trainerpk--->
           <form id="formName" class="form">
-            <input type="text" placeholder="JuanesGH" class="txt" id="txtPlayerName">
+            <input type="text" placeholder="name?" class="txt" id="txtPlayerName">
             <button  class="btn" id="PlayerName">Accept</button>
           </form>
       </div>
@@ -28,11 +30,11 @@
   </div>
 
   <!------pick the pokemons------>
-  <div class="container " id="choosePokemon" >
+  <div class="container boxChosePokemon" id="choosePokemon">
     <div class="row">
-        <div class="col-xs-10 col-md-11 col-lg-11"  style="justify-content: center;">
-          <h1 class="text-pokemon">SELECT YOUR POKÉMON</h1>
-          <div class="pokemon-list" id="listaPokemon">
+        <div class="col-12">
+             <h1 class="text-pokemon">SELECT YOUR POKÉMON</h1>
+             <div class="pokemon-list" id="listaPokemon">
 
               <div class="pokemon-1" id="pokemon-1">
                 <div class="pokemonsCards">
@@ -66,16 +68,15 @@
                   <button class="btnPokemonPiker" id="btnPokemonPiker" onclick="showTheCam()">SELECT</button>
                 </div>
               </div>
+
             </div>
       </div>
     </div>
     
   </div>
 <!------Heder pokemon4------>
-<div class="row">
-<div class="col-xs-10 col-md-12 col-lg-12">
 <div class="container-battleC" id="container__turno" style="display: none;" >
-
+    
   <div class="namePlayer" id="p1">
     <h1 class="namePlayertxt">FIGHT</h1>
     <h1 id = "txtplayer1" class="player">PLAYER</h1>
@@ -84,18 +85,21 @@
   </div>
 <!-------------call the pokemon4------------------>
     <div class="pokemonList-4" id="pokemonList4">
-        <div class="pokemon-4" id="pokemon-4">
-          <img  src="" alt="" class="imgPokemon4">
-            <div class="infoPokemon_4Moves">
-              <h1 class="namePokemon-4"></h1>
-              <h2 class="lifePokemon4" id="life_Pokemon_4"> 100 </h2> 
-              <h4 id="levelPokemonEnemy">Level: </h4>
-              <h5 ></h5>
-              <h6 ></h6>
-            </div>
-          <img src="./img/d5ynr9c-33aeebd0-1cd8-45d9-86fc-8431aa114534.png" class="battleCamp">
-              
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="pokemon-4" id="pokemon-4">
+            <img  src="" alt="" class="imgPokemon4">
+              <div class="infoPokemon_4Moves">
+                <h1 class="namePokemon-4"></h1>
+                <h2 class="lifePokemon4" id="life_Pokemon_4"> 100 </h2> 
+                <h4 id="levelPokemonEnemy">Level: </h4>
+                <h5 ></h5>
+                <h6 ></h6>
+              </div>
+            <img src="./img/d5ynr9c-33aeebd0-1cd8-45d9-86fc-8431aa114534.png" class="battleCamp">  
         </div>
+      </div>
+    </div>
 <!-------------pokemon chosen------------------>
               <div class="pokemon-5" id="pokemon5">
                 <h2 class="lifePokemon5" id="pokemon5Life">100</h2>
@@ -112,8 +116,8 @@
     <div class="alertWinner" ></div>     
     <div class="alertLoser"></div>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
 
     <script src="./js/main.js"></script>

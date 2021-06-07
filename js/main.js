@@ -176,7 +176,7 @@ switch(turno){
 }
 function accept(){
 $chosePlayerName.classList.toggle('start')
-$chosePokemon.classList.toggle('choosePokemon')
+//$chosePokemon.classList.toggle('choosePokemon')
 }
 //--------------------------pokemon battle----------------------------------------//
 const $life_Div_MyPokemon         =   document.getElementById('pokemon5Life')
@@ -239,24 +239,32 @@ function paintTheResultOfTheAttacks(restLife_p4, restLife_p5){
   if(restLife_p4 <= 0){
     let prueba1 = document.querySelector('.alertWinner')
     let paintPrueba1 = 
-    `<div class="alert alert-success" role="alert" id="alertWinner"">
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, Yuo have win the game!!!</p>
-      <hr>
-      <p class="mb-0">Reload if your wont to play again</p>
-      <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
+    `<div class="row">
+      <div class=".col-6">    
+        <div class="alert alert-success" role="alert" id="alertWinner"">
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, Yuo have win the game!!!</p>
+          <hr>
+          <p class="mb-0">Reload if your wont to play again</p>
+          <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
+        </div>
+      </div>
     </div>`
     prueba1.innerHTML = paintPrueba1
   }else if(restLife_p5 <= 0){
     let prueba = document.querySelector('.alertLoser')
     let paintPrueba = 
-    `<div class="alert alert-danger" role="alert" id="alertLoser" ">
-      <h4 class="alert-heading">GAMER OVER!</h4>
-      <p>Aww the nex time will be</p>
-      <hr>
-      <p class="mb-0">Reload if your wont to play again</p>
-      <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
-    </div>`
+    `<div class="row">
+      <div class=".col-6">
+        <div class="alert alert-danger" role="alert" id="alertLoser" ">
+          <h4 class="alert-heading">GAMER OVER!</h4>
+          <p>Aww the nex time will be</p>
+          <hr>
+          <p class="mb-0">Reload if your wont to play again</p>
+          <button class="btn_reload" value="Actualizar" onclick="location.reload()">Reload</button>
+        </div>
+    </div>
+  </div>`
     prueba.innerHTML = paintPrueba
   }
 }
