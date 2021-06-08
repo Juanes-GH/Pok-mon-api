@@ -276,95 +276,95 @@ body{
     margin-block: 6px;
 }
 /*-----------------------------------------------------------------------------------------*/
-   @media (max-width: 400px){
-     .boxChosePokemon {
-        background-color: #0691c0;
-        margin-top: 100px;
-        border: 1px #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .alert{
-        margin-left: -236px;
-        margin-top: 115px;
-        position: relative;
-        width: 410px;
-        height: auto;    }
-    .container-battleC {
-        background-color: #82e8a0;
-        width: 498px;
-        height: auto;
-        margin-top: 60px;
-    }
-    .infoPokemon_4Moves {
-        float: right;
-        height: auto;
-        width: 473px;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 45px;
-        color: #88c3ee;
-        font-family: Anton;
-        text-transform: uppercase;
-        text-align: center;
-        display: block;
-        margin-right: 15px;
-        margin-top: 10px;
-        column-count: 3;
-    }
-    .infoPokemonMoves {
-        height: auto;
-        width: 473px;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 45px;
-        color: #88c3ee;
-        font-family: Anton;
-        text-transform: uppercase;
-        text-align: center;
-        display: block;
-        margin-top: -194px;
-        column-count: 3;
-        margin-left: 13px;
-    }
-    .battleCamp {
-        display: flex;
-        width: auto;
-        height: auto;
-        padding-bottom: 216px;
-        padding-left: 50px;
-        padding-top: 29px;
-    }
-    .imgPokemon5 {
-        width: 130px;
-        height: auto;
-        transform: scaleX(-1);
-        display: flex;
-        position: absolute;
-        margin-top: -145px;
-        margin-left: 95px;
-    }
-    .imgPokemon4 {
-        width: 130px;
-        height: auto;
-        margin-top: 161px;
-        display: block;
-        position: absolute;
-        flex-direction: row;
-        margin-left: 296px;
-    }
-    .displayText {
-        font-family: Anton;
-        margin-left: 20px;
-        margin-top: -85px;
-        position: absolute;
-        font-size: 20px;
-        letter-spacing: 3px;
-        margin-top: -72px;
-    }
+   @media (max-width: 385px){
+        .boxChosePokemon {
+            background-color: #0691c0;
+            margin-top: 100px;
+            border: 1px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .alert{
+            margin-left: -236px;
+            margin-top: 115px;
+            position: relative;
+            width: 410px;
+            height: auto;    }
+        .container-battleC {
+            background-color: #82e8a0;
+            width: 498px;
+            height: auto;
+            margin-top: 60px;
+        }
+        .infoPokemon_4Moves {
+            float: right;
+            height: auto;
+            width: 473px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 45px;
+            color: #88c3ee;
+            font-family: Anton;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-right: 15px;
+            margin-top: 10px;
+            column-count: 3;
+        }
+        .infoPokemonMoves {
+            height: auto;
+            width: 473px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 45px;
+            color: #88c3ee;
+            font-family: Anton;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-top: -194px;
+            column-count: 3;
+            margin-left: 13px;
+        }
+        .battleCamp {
+            display: flex;
+            width: auto;
+            height: auto;
+            padding-bottom: 216px;
+            margin-left: 50px;
+            padding-top: 29px;
+        }
+        .imgPokemon5 {
+            width: 130px;
+            height: auto;
+            transform: scaleX(-1);
+            display: flex;
+            position: absolute;
+            margin-top: -145px;
+            margin-left: 95px;
+        }
+        .imgPokemon4 {
+            width: 130px;
+            height: auto;
+            margin-top: 161px;
+            display: block;
+            position: absolute;
+            flex-direction: row;
+            margin-left: 296px;
+        }
+        .displayText {
+            font-family: Anton;
+            margin-left: 20px;
+            margin-top: -85px;
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-top: -72px;
+        }
    }
 
    @media (min-width: 1800px){
