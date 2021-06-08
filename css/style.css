@@ -175,13 +175,12 @@ body{
     margin-top: 60px;
 }
 .battleCamp {
-   display: block;
-  margin: 0 auto;
-  width: auto;
-   height: auto;
-   padding-bottom: 20px;
-   margin-top: 15px;
-   margin-left: 298px;
+    display: block;
+    width: auto;
+    height: auto;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 408px;
 }
 .namePokemon-4{
     text-transform: uppercase;
@@ -194,7 +193,7 @@ body{
     position: absolute;
     float: right;
     flex-direction: row;
-    margin-left: 515px;
+    margin-left: 638px;
 }
 .imgPokemon5 {
     width: 14vw;
@@ -203,9 +202,8 @@ body{
     display: flex;
     position: absolute;
     margin-top: 11px;
-    margin-left: 360px;
+    margin-left: 439px;
 }
-
 .infoPokemonMoves {
     height: auto;
     width: 20vw;
