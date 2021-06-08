@@ -276,7 +276,7 @@ body{
     margin-block: 6px;
 }
 /*-----------------------------------------------------------------------------------------*/
-   @media (max-width: 385px){
+   @media (min-width: 320px){
         .boxChosePokemon {
             background-color: #0691c0;
             margin-top: 100px;
@@ -366,7 +366,6 @@ body{
             margin-top: -72px;
         }
    }
-
    @media (min-width: 1800px){
     .imgPokemon4 {
         width: 160px;
