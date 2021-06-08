@@ -367,7 +367,7 @@ body{
     }
    }
 
-   @media (max-width: 1800px){
+   @media (min-width: 1800px){
     .imgPokemon4 {
         width: 160px;
         height: auto;
@@ -384,7 +384,7 @@ body{
         transform: scaleX(-1);
         display: flex;
         position: absolute;
-        margin-top: -20px;
+        margin-top: -58px;
         margin-left: 670px;
     }
     .battleCamp {
@@ -395,4 +395,14 @@ body{
         margin-top: 15px;
         margin-left: 670px;
     }
+    .alertWinner, .alertLoser{
+        position: absolute;
+        margin: 0 auto;
+        left: 660px;
+        top: 800px;
+        opacity: 0.9;
+        width: 530px;
+        height: auto;
+    }
+    
    }
